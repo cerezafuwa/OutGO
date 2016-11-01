@@ -1,0 +1,2 @@
+# OutGO
+SOA individual project
