@@ -39,9 +39,9 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="artistNameLabel" destination="LiU-ke-ZY1" id="gEu-B2-eHK"/>
+                <outlet property="artistNameLabel" destination="LiU-ke-ZY1" id="bAE-ME-dpo"/>
                 <outlet property="artworkImageView" destination="1zH-LA-RBg" id="xtP-3C-gA1"/>
-                <outlet property="nameLabel" destination="3GT-jZ-eHH" id="CVJ-1u-05L"/>
+                <outlet property="nameLabel" destination="3GT-jZ-eHH" id="OuA-bH-Ksy"/>
             </connections>
             <point key="canvasLocation" x="6" y="117"/>
         </tableViewCell>

@@ -8,6 +8,14 @@
 
 class SearchResult {
     var name = ""
-    var artistName = ""
+    var address = ""
+    var pname = ""
+    var cityname = ""
+    var adname = ""
+    var location = ""
+}
+
+func < (lhs: SearchResult, rhs: SearchResult) -> Bool {
+    return lhs.name.localizedStandardCompare(rhs.name) == .orderedAscending
 }
 

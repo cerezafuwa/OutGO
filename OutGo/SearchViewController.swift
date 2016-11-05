@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
     var searchResults: [SearchResult] = []
     var hasSearched = false
     
+    
     struct TableViewCellIdentifiers {
         static let searchResultCell = "SearchResultCell"
         static let nothingFoundCell = "NothingFoundCell"
@@ -50,6 +51,90 @@ class SearchViewController: UIViewController {
         }
     }
     
+    func parse(dictionary: [String: Any]) -> [SearchResult] {
+        
+        guard let array = dictionary["pois"] as? [Any] else {
+            print("Expected 'pois' array")
+            return []
+        }
+        
+        var searchResults: [SearchResult] = []
+        
+        for resultDict in array {
+            if let resultDict = resultDict as? [String: Any] {
+                
+                var searchResult: SearchResult?
+                
+                if let wrapperType = resultDict["biz_type"] as? String {
+                    switch wrapperType {
+                    case "tour":
+                        searchResult = parse(tour: resultDict)
+                    case "diner":
+                        searchResult = parse(diner: resultDict)
+                    case "hotel":
+                        searchResult = parse(hotel: resultDict)
+                    default:
+                        break
+                    }
+                }
+                if let result = searchResult {
+                    searchResults.append(result)
+                }
+            }
+        }
+        
+        return searchResults
+    }
+
+    func parse(tour dictionary: [String: Any]) -> SearchResult {
+        let searchResult = SearchResult()
+        
+        searchResult.name = dictionary["name"] as! String
+        searchResult.address = dictionary["address"] as! String
+        searchResult.pname = dictionary["pname"] as! String
+        searchResult.cityname = dictionary["cityname"] as! String
+        searchResult.adname = dictionary["adname"] as! String
+        searchResult.location = dictionary["location"] as! String
+        return searchResult
+    }
+    
+    func parse(diner dictionary: [String: Any]) -> SearchResult {
+        let searchResult = SearchResult()
+        
+        searchResult.name = dictionary["name"] as! String
+        searchResult.address = dictionary["address"] as! String
+        searchResult.pname = dictionary["pname"] as! String
+        searchResult.cityname = dictionary["cityname"] as! String
+        searchResult.adname = dictionary["adname"] as! String
+        searchResult.location = dictionary["location"] as! String
+        return searchResult
+    }
+    
+    func parse(hotel dictionary: [String: Any]) -> SearchResult {
+        let searchResult = SearchResult()
+        
+        searchResult.name = dictionary["name"] as! String
+        searchResult.address = dictionary["address"] as! String
+        searchResult.pname = dictionary["pname"] as! String
+        searchResult.cityname = dictionary["cityname"] as! String
+        searchResult.adname = dictionary["adname"] as! String
+        searchResult.location = dictionary["location"] as! String
+        return searchResult
+    }
+
+
+    func showNetworkError() {
+        let alert = UIAlertController(
+            title: "Whoops...",
+            message:
+            "There was an error reading from GaoDe Map. Please try again.",
+            preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
@@ -80,9 +165,16 @@ extension SearchViewController: UISearchBarDelegate {
             let url = MapURL(searchText: searchBar.text!)
             print("URL: '\(url)'")
             if let jsonString = performStoreRequest(with: url) {
-                print("Received JSON string '\(jsonString)'")
+                if let jsonDictionary = parse(json: jsonString) {
+                    print("Dictionary \(jsonDictionary)")
+                    tableView.reloadData()
+                    
+                    searchResults = parse(dictionary: jsonDictionary)
+                    
+                    return
+                }
             }
-            tableView.reloadData()
+            showNetworkError()
         }
     }
     
@@ -118,7 +210,12 @@ extension SearchViewController: UITableViewDataSource {
             
             let searchResult = searchResults[indexPath.row]
             cell.nameLabel.text = searchResult.name
-            cell.artistNameLabel.text = searchResult.artistName
+            
+            if searchResult.address.isEmpty {
+                cell.artistNameLabel.text = "Unknown"
+            } else {
+                cell.artistNameLabel.text = String(format: "%@ (%@)", searchResult.adname, searchResult.address)
+            }
             return cell
         }
     }
