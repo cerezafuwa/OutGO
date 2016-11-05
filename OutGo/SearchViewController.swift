@@ -170,6 +170,7 @@ extension SearchViewController: UISearchBarDelegate {
                     tableView.reloadData()
                     
                     searchResults = parse(dictionary: jsonDictionary)
+                    searchResults.sort(by: <)
                     
                     return
                 }
