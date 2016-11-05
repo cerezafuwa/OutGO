@@ -64,25 +64,13 @@ class SearchViewController: UIViewController {
             if let resultDict = resultDict as? [String: Any] {
                 
                 var searchResult: SearchResult?
+                searchResult = parse(tour: resultDict)
                 
-                if let wrapperType = resultDict["biz_type"] as? String {
-                    switch wrapperType {
-                    case "tour":
-                        searchResult = parse(tour: resultDict)
-                    case "diner":
-                        searchResult = parse(diner: resultDict)
-                    case "hotel":
-                        searchResult = parse(hotel: resultDict)
-                    default:
-                        break
-                    }
-                }
-                if let result = searchResult {
-                    searchResults.append(result)
+                if let result = searchResult{
+                searchResults.append(result)
                 }
             }
         }
-        
         return searchResults
     }
 
@@ -97,31 +85,6 @@ class SearchViewController: UIViewController {
         searchResult.location = dictionary["location"] as! String
         return searchResult
     }
-    
-    func parse(diner dictionary: [String: Any]) -> SearchResult {
-        let searchResult = SearchResult()
-        
-        searchResult.name = dictionary["name"] as! String
-        searchResult.address = dictionary["address"] as! String
-        searchResult.pname = dictionary["pname"] as! String
-        searchResult.cityname = dictionary["cityname"] as! String
-        searchResult.adname = dictionary["adname"] as! String
-        searchResult.location = dictionary["location"] as! String
-        return searchResult
-    }
-    
-    func parse(hotel dictionary: [String: Any]) -> SearchResult {
-        let searchResult = SearchResult()
-        
-        searchResult.name = dictionary["name"] as! String
-        searchResult.address = dictionary["address"] as! String
-        searchResult.pname = dictionary["pname"] as! String
-        searchResult.cityname = dictionary["cityname"] as! String
-        searchResult.adname = dictionary["adname"] as! String
-        searchResult.location = dictionary["location"] as! String
-        return searchResult
-    }
-
 
     func showNetworkError() {
         let alert = UIAlertController(
@@ -167,11 +130,9 @@ extension SearchViewController: UISearchBarDelegate {
             if let jsonString = performStoreRequest(with: url) {
                 if let jsonDictionary = parse(json: jsonString) {
                     print("Dictionary \(jsonDictionary)")
-                    tableView.reloadData()
                     
                     searchResults = parse(dictionary: jsonDictionary)
-                    searchResults.sort(by: <)
-                    
+                    tableView.reloadData()
                     return
                 }
             }
