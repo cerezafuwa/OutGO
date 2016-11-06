@@ -8,17 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WeatherPraseController: UITableViewController {
+    @IBOutlet weak var provinceLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var windderectionLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var windpowerLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    
     @IBAction func cancel() {
         dismiss(animated: true, completion: nil)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let label:UILabel = UILabel(frame:CGRect(x: 100, y: 100, width: 300, height: 100));
-        self.view.addSubview(label)
-        //测试Swift调用Object的XML库功能
         testXML()
     }
     
@@ -46,19 +52,36 @@ class ViewController: UIViewController {
         
         for user in users {
             //User节点的id属性
-            let type = user.attribute(forName: "type").stringValue()
-            //获取name节点元素
+            let uid = user.attribute(forName: "type").stringValue()
             //获取tel子节点
             let telElement = user.elements(forName: "live")[0] as! GDataXMLElement
             //获取tel节点下mobile和home节点
+            let province = (telElement.elements(forName: "province")[0]
+                as! GDataXMLElement).stringValue()
+            let city = (telElement.elements(forName: "city")[0]
+                as! GDataXMLElement).stringValue()
+            let time = (telElement.elements(forName: "reporttime")[0]
+                as! GDataXMLElement).stringValue()
             let weather = (telElement.elements(forName: "weather")[0]
                 as! GDataXMLElement).stringValue()
-            let temperature = (telElement.elements(forName: "temperature")[0]
+            let temp = (telElement.elements(forName: "temperature")[0]
                 as! GDataXMLElement).stringValue()
-            let winddirection = (telElement.elements(forName: "winddirection")[0]
+            let winddrection = (telElement.elements(forName: "winddirection")[0]
                 as! GDataXMLElement).stringValue()
             let windpower = (telElement.elements(forName: "windpower")[0]
                 as! GDataXMLElement).stringValue()
+            let humidity = (telElement.elements(forName: "humidity")[0]
+                as! GDataXMLElement).stringValue()
+            //输出调试信息
+            provinceLabel.text = "\(province)"
+            cityLabel.text = "\(city)"
+            timeLabel.text = "\(time)"
+            weatherLabel.text = "\(weather)"
+            temperatureLabel.text = "\(temp)"
+            windpowerLabel.text = "\(windpower)"
+            windderectionLabel.text = "\(winddrection)"
+            humidityLabel.text = "\(humidity)"
+            
         }
     }
     func iTunesURL() -> URL {

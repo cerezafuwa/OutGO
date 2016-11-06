@@ -21,7 +21,7 @@
 		1B7CB6DC1DCEC793004C035E /* ChangeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */; };
 		1B7CB6DE1DCED0C7004C035E /* PlacemarkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB6DD1DCED0C7004C035E /* PlacemarkResult.swift */; };
 		1B7CB7271DCEE336004C035E /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7CB7261DCEE336004C035E /* libxml2.2.tbd */; };
-		1B7CB72A1DCEE72D004C035E /* WeatherPrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB7291DCEE72D004C035E /* WeatherPrase.swift */; };
+		1B7CB72A1DCEE72D004C035E /* WeatherPraseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB7291DCEE72D004C035E /* WeatherPraseController.swift */; };
 		1B7CB7311DCEF27F004C035E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB7301DCEF27F004C035E /* GDataXMLNode.m */; };
 		1BB54EE71DCDA2F8007DFBED /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB54EE61DCDA2F8007DFBED /* SearchResult.swift */; };
 		1BB54EE91DCDA641007DFBED /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB54EE81DCDA641007DFBED /* SearchResultCell.xib */; };
@@ -48,7 +48,7 @@
 		1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeResult.swift; sourceTree = "<group>"; };
 		1B7CB6DD1DCED0C7004C035E /* PlacemarkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacemarkResult.swift; sourceTree = "<group>"; };
 		1B7CB7261DCEE336004C035E /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
-		1B7CB7291DCEE72D004C035E /* WeatherPrase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPrase.swift; sourceTree = "<group>"; };
+		1B7CB7291DCEE72D004C035E /* WeatherPraseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPraseController.swift; sourceTree = "<group>"; };
 		1B7CB72B1DCEEAB1004C035E /* OutGo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OutGo-Bridging-Header.h"; sourceTree = "<group>"; };
 		1B7CB72F1DCEF27F004C035E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "../../Downloads/hangge_646_1-2/GDataXML/GDataXMLNode.h"; sourceTree = "<group>"; };
 		1B7CB7301DCEF27F004C035E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "../../Downloads/hangge_646_1-2/GDataXML/GDataXMLNode.m"; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				1B7CB6D91DCE4A04004C035E /* MapViewController.swift */,
 				1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */,
 				1B7CB6DD1DCED0C7004C035E /* PlacemarkResult.swift */,
-				1B7CB7291DCEE72D004C035E /* WeatherPrase.swift */,
+				1B7CB7291DCEE72D004C035E /* WeatherPraseController.swift */,
 				1B7CB72B1DCEEAB1004C035E /* OutGo-Bridging-Header.h */,
 			);
 			path = OutGo;
@@ -218,7 +218,7 @@
 				1B09C29A1DC7A10E00610098 /* AppDelegate.swift in Sources */,
 				1BCC86D71DCB302D0037335B /* Location+CoreDataProperties.swift in Sources */,
 				1B7CB7311DCEF27F004C035E /* GDataXMLNode.m in Sources */,
-				1B7CB72A1DCEE72D004C035E /* WeatherPrase.swift in Sources */,
+				1B7CB72A1DCEE72D004C035E /* WeatherPraseController.swift in Sources */,
 				1B7CB6DA1DCE4A04004C035E /* MapViewController.swift in Sources */,
 				1BCC86CD1DCB2B310037335B /* DataModel.xcdatamodeld in Sources */,
 				1B7CB6DC1DCEC793004C035E /* ChangeResult.swift in Sources */,
