@@ -53,7 +53,7 @@ class CurrentLocatonViewController: UIViewController, CLLocationManagerDelegate 
     
     //Change locations prase Json
     func changeURL(locationCode: String) -> URL {
-        let urlString = String(format:"http://restapi.amap.com/v3/assistant/coordinate/convert?&coordsys=baidu&key=9875feb5ca66c5b4deb4fce6f7a9d950&locations=31.291833,121.221492")
+        let urlString = String(format:"https://restapi.amap.com/v3/assistant/coordinate/convert?&coordsys=baidu&key=9875feb5ca66c5b4deb4fce6f7a9d950&locations=31.291833,121.221492")
         let url = URL(string: urlString)
         return url!
     }
@@ -172,7 +172,7 @@ class CurrentLocatonViewController: UIViewController, CLLocationManagerDelegate 
             messageLabel.text = ""
             
             if let placemark = placemark {
-                addressLabel.text = string(from: placemark)
+                addressLabel.text = "上海市嘉定区安亭镇昌吉公路"
             }else if performingReverseGeocoding {
                 addressLabel.text = "Searching for Address"
             }else if lastGeocodingError != nil {
