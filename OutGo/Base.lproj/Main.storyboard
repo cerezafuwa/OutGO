@@ -353,18 +353,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Map" id="9hl-HX-ETO">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="GFj-RB-M0K">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sfh-eA-fCW">
-                                                <rect key="frame" x="16" y="7" width="71" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Location"/>
-                                                <connections>
-                                                    <action selector="showLocations" destination="X0h-bi-U1a" eventType="touchDown" id="wl3-8x-KCH"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Map" id="9hl-HX-ETO"/>
                                 </items>
                             </navigationBar>
                         </subviews>

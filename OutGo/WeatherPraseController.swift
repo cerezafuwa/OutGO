@@ -72,15 +72,16 @@ class WeatherPraseController: UITableViewController {
                 as! GDataXMLElement).stringValue()
             let humidity = (telElement.elements(forName: "humidity")[0]
                 as! GDataXMLElement).stringValue()
+            
             //输出调试信息
-            provinceLabel.text = "\(province)"
-            cityLabel.text = "\(city)"
-            timeLabel.text = "\(time)"
-            weatherLabel.text = "\(weather)"
-            temperatureLabel.text = "\(temp)"
-            windpowerLabel.text = "\(windpower)"
-            windderectionLabel.text = "\(winddrection)"
-            humidityLabel.text = "\(humidity)"
+            provinceLabel.text = "\(province!)"
+            cityLabel.text = "\(city!)"
+            timeLabel.text = "\(time!)"
+            weatherLabel.text = "\(weather!)"
+            temperatureLabel.text = "\(temp!)"
+            windpowerLabel.text = "\(windpower!)"
+            windderectionLabel.text = "\(winddrection!)"
+            humidityLabel.text = "\(humidity!)"
             
         }
     }
