@@ -20,6 +20,9 @@
 		1B7CB6DA1DCE4A04004C035E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB6D91DCE4A04004C035E /* MapViewController.swift */; };
 		1B7CB6DC1DCEC793004C035E /* ChangeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */; };
 		1B7CB6DE1DCED0C7004C035E /* PlacemarkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB6DD1DCED0C7004C035E /* PlacemarkResult.swift */; };
+		1B7CB7271DCEE336004C035E /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7CB7261DCEE336004C035E /* libxml2.2.tbd */; };
+		1B7CB72A1DCEE72D004C035E /* WeatherPrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB7291DCEE72D004C035E /* WeatherPrase.swift */; };
+		1B7CB7311DCEF27F004C035E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB7301DCEF27F004C035E /* GDataXMLNode.m */; };
 		1BB54EE71DCDA2F8007DFBED /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB54EE61DCDA2F8007DFBED /* SearchResult.swift */; };
 		1BB54EE91DCDA641007DFBED /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB54EE81DCDA641007DFBED /* SearchResultCell.xib */; };
 		1BB54EEB1DCDABF9007DFBED /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB54EEA1DCDABF9007DFBED /* SearchResultCell.swift */; };
@@ -44,6 +47,11 @@
 		1B7CB6D91DCE4A04004C035E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeResult.swift; sourceTree = "<group>"; };
 		1B7CB6DD1DCED0C7004C035E /* PlacemarkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacemarkResult.swift; sourceTree = "<group>"; };
+		1B7CB7261DCEE336004C035E /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		1B7CB7291DCEE72D004C035E /* WeatherPrase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPrase.swift; sourceTree = "<group>"; };
+		1B7CB72B1DCEEAB1004C035E /* OutGo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OutGo-Bridging-Header.h"; sourceTree = "<group>"; };
+		1B7CB72F1DCEF27F004C035E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "../../Downloads/hangge_646_1-2/GDataXML/GDataXMLNode.h"; sourceTree = "<group>"; };
+		1B7CB7301DCEF27F004C035E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "../../Downloads/hangge_646_1-2/GDataXML/GDataXMLNode.m"; sourceTree = "<group>"; };
 		1BB54EE61DCDA2F8007DFBED /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		1BB54EE81DCDA641007DFBED /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		1BB54EEA1DCDABF9007DFBED /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B7CB7271DCEE336004C035E /* libxml2.2.tbd in Frameworks */,
 				1BCC86D91DCB4D600037335B /* CoreData.framework in Frameworks */,
 				1B7CB6D81DCE491D004C035E /* MapKit.framework in Frameworks */,
 				1B09C2AF1DC8695000610098 /* CoreLocation.framework in Frameworks */,
@@ -87,6 +96,8 @@
 		1B09C2981DC7A10E00610098 /* OutGo */ = {
 			isa = PBXGroup;
 			children = (
+				1B7CB72F1DCEF27F004C035E /* GDataXMLNode.h */,
+				1B7CB7301DCEF27F004C035E /* GDataXMLNode.m */,
 				1BCC86D41DCB302D0037335B /* Location+CoreDataClass.swift */,
 				1BCC86D51DCB302D0037335B /* Location+CoreDataProperties.swift */,
 				1B09C2991DC7A10E00610098 /* AppDelegate.swift */,
@@ -104,6 +115,8 @@
 				1B7CB6D91DCE4A04004C035E /* MapViewController.swift */,
 				1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */,
 				1B7CB6DD1DCED0C7004C035E /* PlacemarkResult.swift */,
+				1B7CB7291DCEE72D004C035E /* WeatherPrase.swift */,
+				1B7CB72B1DCEEAB1004C035E /* OutGo-Bridging-Header.h */,
 			);
 			path = OutGo;
 			sourceTree = "<group>";
@@ -111,6 +124,7 @@
 		1B09C2AD1DC8695000610098 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B7CB7261DCEE336004C035E /* libxml2.2.tbd */,
 				1B7CB6D71DCE491D004C035E /* MapKit.framework */,
 				1BCC86D81DCB4D600037335B /* CoreData.framework */,
 				1B09C2AE1DC8695000610098 /* CoreLocation.framework */,
@@ -150,6 +164,7 @@
 				TargetAttributes = {
 					1B09C2951DC7A10E00610098 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -202,6 +217,8 @@
 				1BB54EE71DCDA2F8007DFBED /* SearchResult.swift in Sources */,
 				1B09C29A1DC7A10E00610098 /* AppDelegate.swift in Sources */,
 				1BCC86D71DCB302D0037335B /* Location+CoreDataProperties.swift in Sources */,
+				1B7CB7311DCEF27F004C035E /* GDataXMLNode.m in Sources */,
+				1B7CB72A1DCEE72D004C035E /* WeatherPrase.swift in Sources */,
 				1B7CB6DA1DCE4A04004C035E /* MapViewController.swift in Sources */,
 				1BCC86CD1DCB2B310037335B /* DataModel.xcdatamodeld in Sources */,
 				1B7CB6DC1DCEC793004C035E /* ChangeResult.swift in Sources */,
@@ -329,10 +346,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = OutGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = c.OutGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OutGo/OutGo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,10 +364,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = OutGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = c.OutGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OutGo/OutGo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
