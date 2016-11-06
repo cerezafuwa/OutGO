@@ -18,6 +18,7 @@
 		1B0C66EC1DCDB22200120004 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0C66EB1DCDB22200120004 /* NothingFoundCell.xib */; };
 		1B7CB6D81DCE491D004C035E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7CB6D71DCE491D004C035E /* MapKit.framework */; };
 		1B7CB6DA1DCE4A04004C035E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB6D91DCE4A04004C035E /* MapViewController.swift */; };
+		1B7CB6DC1DCEC793004C035E /* ChangeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */; };
 		1BB54EE71DCDA2F8007DFBED /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB54EE61DCDA2F8007DFBED /* SearchResult.swift */; };
 		1BB54EE91DCDA641007DFBED /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB54EE81DCDA641007DFBED /* SearchResultCell.xib */; };
 		1BB54EEB1DCDABF9007DFBED /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB54EEA1DCDABF9007DFBED /* SearchResultCell.swift */; };
@@ -40,6 +41,7 @@
 		1B0C66EB1DCDB22200120004 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		1B7CB6D71DCE491D004C035E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1B7CB6D91DCE4A04004C035E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeResult.swift; sourceTree = "<group>"; };
 		1BB54EE61DCDA2F8007DFBED /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		1BB54EE81DCDA641007DFBED /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		1BB54EEA1DCDABF9007DFBED /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				1BB54EE81DCDA641007DFBED /* SearchResultCell.xib */,
 				1B0C66EB1DCDB22200120004 /* NothingFoundCell.xib */,
 				1B7CB6D91DCE4A04004C035E /* MapViewController.swift */,
+				1B7CB6DB1DCEC793004C035E /* ChangeResult.swift */,
 			);
 			path = OutGo;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				1BCC86D71DCB302D0037335B /* Location+CoreDataProperties.swift in Sources */,
 				1B7CB6DA1DCE4A04004C035E /* MapViewController.swift in Sources */,
 				1BCC86CD1DCB2B310037335B /* DataModel.xcdatamodeld in Sources */,
+				1B7CB6DC1DCEC793004C035E /* ChangeResult.swift in Sources */,
 				1BCC86D61DCB302D0037335B /* Location+CoreDataClass.swift in Sources */,
 				1BB54EEB1DCDABF9007DFBED /* SearchResultCell.swift in Sources */,
 				1B09C29C1DC7A10E00610098 /* CurrentLocationViewController.swift in Sources */,

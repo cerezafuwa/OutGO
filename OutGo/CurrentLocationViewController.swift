@@ -51,6 +51,38 @@ class CurrentLocatonViewController: UIViewController, CLLocationManagerDelegate 
         configureGetButton()
     }
     
+    //Change locations prase Json
+    func changeURL(locationCode: String) -> URL {
+        let urlString = String(format:"http://restapi.amap.com/v3/assistant/coordinate/convert?&coordsys=baidu&key=9875feb5ca66c5b4deb4fce6f7a9d950&locations=31.291833,121.221492")
+        let url = URL(string: urlString)
+        return url!
+    }
+    func performStoreRequest(with url: URL) -> String? {
+        do {
+            return try String(contentsOf: url, encoding: .utf8)
+        } catch {
+            print("Download Error: \(error)")
+            return nil
+        }
+    }
+    func parse(json: String) -> [String: Any]? {
+        guard let data = json.data(using: .utf8, allowLossyConversion: false)
+            else { return nil }
+        do {
+            return try JSONSerialization.jsonObject(
+                with: data, options: []) as? [String: Any]
+        } catch {
+            print("JSON Error: \(error)")
+            return nil
+        }
+    }
+    func parse(dictionary: [String: Any]) -> ChangeResult {
+        let changeResult = ChangeResult()
+        changeResult.locations = dictionary["locations"] as! String
+        return changeResult
+    }
+    //Change locations finished
+    
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(title: "Location Services Disabled",
                                       message: "Please enable location services for this app in Settings.",

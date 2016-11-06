@@ -23,8 +23,7 @@ class SearchViewController: UIViewController {
     }
     
     func MapURL(searchText: String) -> URL {
-        let escapedSearchText = searchText.addingPercentEncoding(
-            withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let escapedSearchText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let urlString = String(format:"https://restapi.amap.com/v3/place/text?&key=9875feb5ca66c5b4deb4fce6f7a9d950&keywords=%@", escapedSearchText)
         let url = URL(string: urlString)
         return url!

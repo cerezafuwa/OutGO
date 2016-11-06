@@ -6,7 +6,7 @@
 //  Copyright © 2016年 胡贝妮. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 import MapKit
 import CoreData
 
@@ -168,4 +168,4 @@ extension MapViewController: UINavigationBarDelegate {
     func position(for bar: UIBarPositioning) -> UIBarPosition {
         return .topAttached
     }
-}
+}*/
